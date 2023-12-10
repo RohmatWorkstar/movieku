@@ -7,7 +7,7 @@ const Favorite = () => {
 
   return (
     <div className="watchlist min-h-screen bg-black container mx-auto px-32 pt-10">
-      <h1 className="text-4xl font-bold mb-5 text-white">Favorite</h1>
+      <h1 className="md:text-4xl md:text-left text-3xl text-center font-bold mb-5 text-white">Favorite</h1>
 
       {favorite.length > 0 ? (
         <div className="grid sm:grid-cols-2  md:grid-cols-4  gap-4 items-center justify-center">
@@ -25,7 +25,7 @@ const Favorite = () => {
           ))}
         </div>
       ) : (
-        <h1 className="text-4xl font-bold mb-5 text-white text-center">No List Of Favorite Movies Added !!!</h1>
+        <h1 className="md:text-4xl font-bold mb-5 text-white text-center text-2xl">No List Of Favorite Movies Added !!!</h1>
       )}
     </div>
   );
