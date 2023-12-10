@@ -47,7 +47,7 @@ const SearchInput = () => {
       </form>
 
       <div className="mb-4 ">
-        <h1 className="text-4xl font-bold  text-white mb-5">Your Search:</h1>
+        <h1 className="md:text-4xl font-bold  text-white md:mb-5 text-2xl my-5">Your Search:</h1>
 
         {loading ? (
           <LoadingCard />

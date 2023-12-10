@@ -45,11 +45,11 @@ const Home = () => {
     <div className="min-h-screen bg-black">
       <div className="container mx-auto p-4 md:px-16 lg:px-32">
         <div className="Search">
-          <h1 className="text-4xl font-bold  text-white mb-5 text-center">Lets Search Your Movie</h1>
+          <h1 className="md:text-4xl font-bold  text-white mb-5 text-center text-2xl">Lets Search Your Movie</h1>
           <Searchinput />
         </div>
         <div className="now-playing mb-4 ">
-          <h1 className="text-4xl font-bold  text-white mb-5">Now Playing</h1>
+          <h1 className="md:text-4xl font-bold  text-white md:mb-5 text-2xl my-5">Now Playing</h1>
           <Swiper
             scrollbar={{
               hide: true,
@@ -65,7 +65,7 @@ const Home = () => {
           </Swiper>
         </div>
         <div className="top-rated">
-          <h1 className="text-4xl font-bold mb-5 text-white">Top Rated</h1>
+          <h1 className="md:text-4xl font-bold  text-white text-2xl mb-5">Top Rated</h1>
           {loading ? (
             <LoadingCard />
           ) : (
