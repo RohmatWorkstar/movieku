@@ -13,7 +13,7 @@ const DetailCard = ({ movie }) => {
   const releaseYear = movie ? new Date(movie.release_date).getFullYear() : null;
 
   return (
-    <div className="md:w-[800px] md:h-[299px] md:absolute md:top-[50px] md:left-[125px]">
+    <div className="md:w-[800px] md:h-[299px] md:absolute md:top-[50px] md:left-[125px] mb-10">
       <div className="md:flex gap-10">
         <div className="image h-[299px] md:w-full z-10 rounded-md overflow-hidden hidden md:block">
           <img className="md:w-full md:h-full object-cover" src={`https://image.tmdb.org/t/p/original/${movie?.poster_path}`} alt={movie?.original_title} />

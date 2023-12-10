@@ -57,7 +57,7 @@ const Detailmovie = () => {
       >
         {loading ? <LoadingCard /> : <DetailCard movie={movie} />}
       </div>
-      <div className="recommend md:px-14 px-10">
+      <div className="recommend md:px-14 px-10 mt-10">
         <h1 className="md:text-4xl font-bold  text-white my-8 text-2xl">Recommend Movie</h1>
         <Swiper
           scrollbar={{
