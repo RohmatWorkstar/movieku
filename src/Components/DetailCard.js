@@ -20,10 +20,10 @@ const DetailCard = ({ movie }) => {
         </div>
 
         <div className="information text-white p-10 md:p-0">
-          <h1 className="md:text-4xl font-bold md:my-2 text-xl">
+          <h1 className="md:text-4xl font-bold md:my-2 text-4xl">
             {movie?.original_title} ({releaseYear})
           </h1>
-          <h2 className="flex items-center gap-2 my-2 text-sm md:text-base">
+          <h2 className="flex items-center gap-2 my-2 text-sm md:text-base text-gray-400">
             <span>{movie?.release_date}</span>
             <span className="flex gap-1">
               {movie?.genres.map((genre) => (
@@ -32,12 +32,12 @@ const DetailCard = ({ movie }) => {
             </span>
             <span>{`(${Math.floor(movie?.runtime / 60)} h ${movie?.runtime % 60} m)`}</span>
           </h2>
-          <div className="flex my-2">
+          <div className="flex md:my-2 my-3">
             {cekBookmarkMovies ? <FaBookmark className="text-white font-bold text-2xl" /> : <CiBookmark className="text-white font-bold text-2xl" onClick={() => addMovieToWatchlist(movie)} style={{ cursor: "pointer" }} />}
             {cekFavoriteMovies ? <MdFavorite className="text-white font-bold text-2xl" /> : <MdFavoriteBorder className="text-white font-bold text-2xl" onClick={() => addMovieToFavorite(movie)} style={{ cursor: "pointer" }} />}
           </div>
           <p className="my-2">{movie?.tagline}</p>
-          <h1 className="text-xl font-semibold">Overview</h1>
+          <h1 className="text-xl font-semibold mt-4">Overview</h1>
           <p>{movie?.overview}</p>
         </div>
       </div>
