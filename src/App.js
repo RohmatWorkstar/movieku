@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes } from "react-router-dom";
+import "./App.css";
+import Home from "./Pages/Home";
+import Navbar from "./Components/Navbar";
+import Watchlist from "./Pages/Watchlist";
+import Favorite from "./Pages/Favorite";
+import Detailmovie from "./Pages/Detailmovie";
+import { GlobalProvider } from "./Context/Globalstate";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <GlobalProvider>
+      <div className="bg-slate-300-800 min-h-screen">
+        <Navbar />
+
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/watchlist" element={<Watchlist />} />
+          <Route path="/favorite" element={<Favorite />} />
+          <Route path="/detailmovies/:movieId" element={<Detailmovie />} />
+        </Routes>
+      </div>
+    </GlobalProvider>
   );
-}
+};
 
 export default App;
