@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { FaBookmark } from "react-icons/fa";
 import { GlobalContext } from "../Context/Globalstate";
-import { Link } from "react-router-dom";
+
 
 const Watchlist = () => {
   const { watchlist, removeMovieFromWatchlist } = useContext(GlobalContext);
@@ -20,9 +20,9 @@ const Watchlist = () => {
                   <h2 className="text-lg font-bold mb-2 text-white">{movie.title}</h2>
                   <p className="text-gray-500 mt-2">{movie.release_date.substring(0, 4)}</p>
                   <FaBookmark className="text-white absolute right-5 bottom-24" onClick={() => removeMovieFromWatchlist(movie.id)} style={{ cursor: "pointer" }} />
-                  <Link to={`/detailmovies/${movie?.id}`} className="bg-blue-600 text-white rounded-md mt-5 p-1 absolute right-5 bottom-3 opacity-0 hover:opacity-100 duration-300">
+                  {/* <Link to={`/detailmovies/${movie?.id}`} className="bg-blue-600 text-white rounded-md mt-5 p-1 absolute right-5 bottom-3 opacity-0 hover:opacity-100 duration-300">
                     Click Detail
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
             </div>
