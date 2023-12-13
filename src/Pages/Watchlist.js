@@ -1,15 +1,18 @@
-import React, { useContext } from "react";
-import { FaBookmark } from "react-icons/fa";
-import { GlobalContext } from "../Context/Globalstate";
-
+import React, { useContext} from 'react';
+import { FaBookmark } from 'react-icons/fa';
+import { GlobalContext } from '../Context/Globalstate';
+// import { Link } from 'react-router-dom';
 
 const Watchlist = () => {
   const { watchlist, removeMovieFromWatchlist } = useContext(GlobalContext);
 
+
+ 
+  
+
   return (
     <div className="watchlist min-h-screen bg-black container mx-auto px-32 pt-10">
       <h1 className="md:text-4xl font-bold mb-5 text-white md:text-left text-center text-3xl">Watchlist</h1>
-
       {watchlist.length > 0 ? (
         <div className="grid sm:grid-cols-2  md:grid-cols-4  gap-4 items-center justify-center">
           {watchlist.map((movie) => (
