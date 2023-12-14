@@ -6,7 +6,7 @@ const Favorite = () => {
   const { favorite, removeMovieFromFavorite } = useContext(GlobalContext);
 
   return (
-    <div className="watchlist min-h-screen bg-black container mx-auto px-32 pt-10">
+    <div className="watchlist min-h-screen bg-black container mx-auto px-32 pt-10 mt-10">
       <h1 className="md:text-4xl md:text-left text-3xl text-center font-bold mb-5 text-white">Favorite</h1>
 
       {favorite.length > 0 ? (
