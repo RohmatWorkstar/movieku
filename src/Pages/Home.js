@@ -42,7 +42,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen bg-black md:pt-20 pt-16">
       <div className="container mx-auto p-4 md:px-16 lg:px-32">
         <div className="Search">
           <h1 className="md:text-4xl font-bold  text-white mb-5 text-center text-2xl">Lets Search Your Movie</h1>
