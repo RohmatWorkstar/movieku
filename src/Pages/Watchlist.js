@@ -11,7 +11,7 @@ const Watchlist = () => {
   
 
   return (
-    <div className="watchlist min-h-screen bg-black container mx-auto px-32 pt-10">
+    <div className="watchlist min-h-screen bg-black container mx-auto px-32 pt-10 mt-10">
       <h1 className="md:text-4xl font-bold mb-5 text-white md:text-left text-center text-3xl">Watchlist</h1>
       {watchlist.length > 0 ? (
         <div className="grid sm:grid-cols-2  md:grid-cols-4  gap-4 items-center justify-center">
