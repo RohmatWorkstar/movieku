@@ -48,7 +48,7 @@ const Detailmovie = () => {
   }, [movieId]);
 
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen bg-black pt-14">
       <div
         className="detail-movie h-[400px] w-full bg-cover bg-center  relative"
         style={{
