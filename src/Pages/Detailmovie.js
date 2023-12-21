@@ -23,7 +23,7 @@ const Detailmovie = () => {
     // Mengambil detail film
     Apimovie(`https://api.themoviedb.org/3/movie/${movieId}`)
       .then((response) => {
-        console.log("Movie Detail:", response);
+        // console.log("Movie Detail:", response);
         setMovie(response);
       })
       .catch((error) => {
@@ -36,7 +36,7 @@ const Detailmovie = () => {
     // Mengambil rekomendasi film
     Apimovie(`https://api.themoviedb.org/3/movie/${movieId}/recommendations`)
       .then((response) => {
-        console.log("Recommendations:", response);
+        // console.log("Recommendations:", response);
         setRecommendations(response.results);
       })
       .catch((error) => {

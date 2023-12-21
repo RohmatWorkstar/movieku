@@ -12,7 +12,7 @@ const Navbar = () => {
     <div className="min-w-full bg-[#0EA5E9] text-white fixed top-0 left-0 z-50">
       <div className="flex px-4 md:px-32 justify-between items-center h-16">
         <Link to={"/"} className="text-4xl font-bold">
-          Movieku
+          Movies
         </Link>
         <div className="hidden md:flex space-x-10 ">
           <Link to="/favorite" onClick={toggleMenu} className="hover:text-blue-700">
