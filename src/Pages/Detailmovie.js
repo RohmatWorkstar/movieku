@@ -14,38 +14,31 @@ const Detailmovie = () => {
   const [recommendations, setRecommendations] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    if (!movieId) {
-      console.error("Invalid movieId:", movieId);
-      return;
-    }
 
-    // Mengambil detail film
-    Apimovie(`https://api.themoviedb.org/3/movie/${movieId}`)
-      .then((response) => {
-        // console.log("Movie Detail:", response);
-        setMovie(response);
-      })
-      .catch((error) => {
-        console.error(error);
-      })
-      .finally(() => {
-        setLoading(false);
-      });
+  
 
-    // Mengambil rekomendasi film
+ useEffect(() => {
+  if (!movieId) {
+    console.error("Invalid movieId:", movieId);
+    return;
+  }
+
+  // Mengambil detail film dan rekomendasi film secara bersamaan
+  Promise.all([
+    Apimovie(`https://api.themoviedb.org/3/movie/${movieId}`),
     Apimovie(`https://api.themoviedb.org/3/movie/${movieId}/recommendations`)
-      .then((response) => {
-        // console.log("Recommendations:", response);
-        setRecommendations(response.results);
-      })
-      .catch((error) => {
-        console.error(error);
-      })
-      .finally(() => {
-        setLoading(false);
-      });
-  }, [movieId]);
+  ])
+    .then(([movieResponse, recommendationsResponse]) => {
+      setMovie(movieResponse);
+      setRecommendations(recommendationsResponse.results);
+    })
+    .catch((error) => {
+      console.error(error);
+    })
+    .finally(() => {
+      setLoading(false);
+    });
+}, [movieId]);
 
   return (
     <div className="min-h-screen bg-black pt-14">
